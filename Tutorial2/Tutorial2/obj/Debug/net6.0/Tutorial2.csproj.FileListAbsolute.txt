@@ -1,0 +1,15 @@
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\bin\Debug\net6.0\Tutorial2.exe
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\bin\Debug\net6.0\Tutorial2.deps.json
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\bin\Debug\net6.0\Tutorial2.runtimeconfig.json
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\bin\Debug\net6.0\Tutorial2.dll
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\bin\Debug\net6.0\Tutorial2.pdb
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.csproj.AssemblyReference.cache
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.GeneratedMSBuildEditorConfig.editorconfig
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.AssemblyInfoInputs.cache
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.AssemblyInfo.cs
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.csproj.CoreCompileInputs.cache
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.dll
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\refint\Tutorial2.dll
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.pdb
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\Tutorial2.genruntimeconfig.cache
+D:\MAK\Web\C#\Tutorial\Tutorial2\Tutorial2\obj\Debug\net6.0\ref\Tutorial2.dll
