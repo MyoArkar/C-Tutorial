@@ -116,6 +116,7 @@
             // 
             this.txt_uid.Location = new System.Drawing.Point(401, 75);
             this.txt_uid.Name = "txt_uid";
+            this.txt_uid.ReadOnly = true;
             this.txt_uid.Size = new System.Drawing.Size(403, 33);
             this.txt_uid.TabIndex = 8;
             // 
@@ -191,7 +192,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.Load += new System.EventHandler(this.UserForm_Load);
