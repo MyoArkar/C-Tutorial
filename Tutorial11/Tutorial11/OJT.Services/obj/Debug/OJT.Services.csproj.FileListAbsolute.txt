@@ -1,0 +1,33 @@
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\obj\Debug\OJT.Services.csproj.AssemblyReference.cache
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\obj\Debug\OJT.Services.csproj.CoreCompileInputs.cache
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\obj\Debug\SCM.Services.dll
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\obj\Debug\SCM.Services.pdb
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.Services.dll
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.Services.pdb
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.DAO.dll
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.Entities.dll
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.DAO.pdb
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\bin\Debug\SCM.Entities.pdb
+D:\.Net\SCMFrame\SCMFrame\SCM.Services\obj\Debug\OJT.Services.csproj.CopyComplete
+D:\New folder\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.AssemblyReference.cache
+D:\New folder\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.CoreCompileInputs.cache
+D:\New folder\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.CopyComplete
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.Services.dll
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.Services.pdb
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.DAO.dll
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.Entities.dll
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.DAO.pdb
+D:\New folder\OJTFrame\OJT.Services\bin\Debug\OJT.Entities.pdb
+D:\New folder\OJTFrame\OJT.Services\obj\Debug\OJT.Services.dll
+D:\New folder\OJTFrame\OJT.Services\obj\Debug\OJT.Services.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.Services.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.Services.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.DAO.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.Entities.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.DAO.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\bin\Debug\OJT.Entities.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.AssemblyReference.cache
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.CoreCompileInputs.cache
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\obj\Debug\OJT.Services.csproj.CopyComplete
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\obj\Debug\OJT.Services.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Services\obj\Debug\OJT.Services.pdb

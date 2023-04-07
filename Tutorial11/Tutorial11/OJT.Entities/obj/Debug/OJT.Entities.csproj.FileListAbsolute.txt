@@ -1,0 +1,12 @@
+D:\New folder\OJTFrame\OJT.Entities\bin\Debug\OJT.Entities.dll
+D:\New folder\OJTFrame\OJT.Entities\bin\Debug\OJT.Entities.pdb
+D:\New folder\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.csproj.AssemblyReference.cache
+D:\New folder\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.csproj.CoreCompileInputs.cache
+D:\New folder\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.dll
+D:\New folder\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\bin\Debug\OJT.Entities.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\bin\Debug\OJT.Entities.pdb
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.csproj.AssemblyReference.cache
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.csproj.CoreCompileInputs.cache
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.dll
+D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.Entities\obj\Debug\OJT.Entities.pdb
