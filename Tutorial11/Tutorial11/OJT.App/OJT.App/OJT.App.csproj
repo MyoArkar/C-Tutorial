@@ -53,6 +53,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StudentDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Course\UCCourse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Course\UCCourse.Designer.cs">
+      <DependentUpon>UCCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Course\UCCourseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Course\UCCourseList.Designer.cs">
+      <DependentUpon>UCCourseList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Menu\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +97,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Course\UCCourse.resx">
+      <DependentUpon>UCCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Course\UCCourseList.resx">
+      <DependentUpon>UCCourseList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,9 +132,34 @@
     <None Include="StudentDBDataSet.xss">
       <DependentUpon>StudentDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="StudentDBDataSet1.xsc">
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet1.xss">
+      <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OJT.DAO\OJT.DAO.csproj">
+      <Project>{e542193d-810e-41bb-8534-0cd541703a00}</Project>
+      <Name>OJT.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OJT.Entities\OJT.Entities.csproj">
+      <Project>{c24df344-0f04-4708-aedf-5f00da707b6a}</Project>
+      <Name>OJT.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OJT.Services\OJT.Services.csproj">
+      <Project>{306deb6a-7700-476e-b96e-816e4d718ac5}</Project>
+      <Name>OJT.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

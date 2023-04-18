@@ -41,3 +41,16 @@ D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.DAO\obj\Debug\OJT.DAO.csproj.CoreCompi
 D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.DAO\obj\Debug\OJT.DAO.csproj.CopyComplete
 D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.DAO\obj\Debug\OJT.DAO.dll
 D:\MAK\Web\C#\frame\OJTFrame\OJTFrame\OJT.DAO\obj\Debug\OJT.DAO.pdb
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\OJT.DAO.dll
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\OJT.DAO.pdb
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\OJT.Entities.dll
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\System.Security.AccessControl.dll
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\System.Security.Principal.Windows.dll
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\OJT.Entities.pdb
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\bin\Debug\System.Security.Permissions.xml
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\obj\Debug\OJT.DAO.csproj.AssemblyReference.cache
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\obj\Debug\OJT.DAO.csproj.CoreCompileInputs.cache
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\obj\Debug\OJT.DAO.csproj.CopyComplete
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\obj\Debug\OJT.DAO.dll
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.DAO\obj\Debug\OJT.DAO.pdb

@@ -13,7 +13,7 @@ namespace DAO.Common
     /// </summary>
     public class DbConnection
     {
-       
+
         /// <summary>
         /// Defines the conStr.
         /// </summary>
@@ -44,7 +44,7 @@ namespace DAO.Common
             return connectionString;
         }
 
-        
+
         /// <summary>
         /// The GetPrivateProfileString.
         /// </summary>
@@ -223,14 +223,14 @@ namespace DAO.Common
                     sqlCmd.Connection.Close();
                 }
             }
-            if(affectedRow >0)
+            if (affectedRow > 0)
             {
                 return true;
             }
             else
             {
                 return false;
-            }        
+            }
         }
 
         /// <summary>
@@ -363,6 +363,6 @@ namespace DAO.Common
             }
             // Return from function
             return dsSet;
-        }       
+        }
     }
 }
