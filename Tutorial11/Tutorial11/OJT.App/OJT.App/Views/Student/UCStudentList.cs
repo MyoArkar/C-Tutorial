@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OJT.App.Views.Menu;
+using OJT.App.Views.Enrollment;
 using OJT.Services;
+using OJT.Services.Enrollment;
 
 namespace OJT.App.Views.Student
 {
     public partial class UCStudentList : UserControl
     {
         private StudentService studentService = new StudentService();
+        private EnrollmentService enrollmentService = new EnrollmentService(); 
         public UCStudentList()
         {
             InitializeComponent();
@@ -29,12 +32,21 @@ namespace OJT.App.Views.Student
             DataTable dt = studentService.GetAll();
             dgvStudentList.DataSource = dt;
 
+            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            btn2.HeaderText = "Enrollment";
+            btn2.Text = "Enroll";
+            btn2.Name = "btn2";
+            btn2.UseColumnTextForButtonValue = true;
+            dgvStudentList.Columns.Add(btn2);
+
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Action";
             btn.Text = "Delete";
             btn.Name = "btn";
             btn.UseColumnTextForButtonValue = true;
             dgvStudentList.Columns.Add(btn);
+
+            
         }
 
         private void btn_addnew_Click(object sender, EventArgs e)
@@ -64,9 +76,16 @@ namespace OJT.App.Views.Student
 
                 }
             }
-            if(dgvStudentList.CurrentCell.ColumnIndex.Equals(9)) {
+            if(dgvStudentList.CurrentCell.ColumnIndex.Equals(10)) {
                 int studentId = Convert.ToInt32(dgvStudentList.Rows[e.RowIndex].Cells["gc_studentid"].Value);
-                bool success = studentService.Delete(studentId);
+                DataTable dtb = enrollmentService.Get(studentId);
+                int e_id = Convert.ToInt32(dtb.Rows[0]["enrollment_id"]);
+                bool success = false;
+                if (studentService.Delete(studentId) && enrollmentService.Delete(e_id))
+                {
+                    success = true;
+                }
+                  
                 if (success)
                 {
                     MessageBox.Show("Delete Success.", "Success", MessageBoxButtons.OK);
@@ -74,6 +93,15 @@ namespace OJT.App.Views.Student
                 this.Controls.Clear();
                 UCStudentList ucStudentList = new UCStudentList();
                 this.Controls.Add(ucStudentList);
+            }
+            if (dgvStudentList.CurrentCell.ColumnIndex.Equals(9))
+            {
+                int studentId = Convert.ToInt32(dgvStudentList.Rows[e.RowIndex].Cells["gc_studentid"].Value);
+                
+                this.Controls.Clear();
+                 UCEnrollment uCEnrollment = new UCEnrollment();
+                uCEnrollment.student_id = studentId;
+                this.Controls.Add(uCEnrollment);
             }
         }
     }

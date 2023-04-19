@@ -34,3 +34,5 @@ D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\OJT.Entit
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\OJT.Services.pdb
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\OJT.Services.dll.config
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.csproj.CopyComplete
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollmentList.resources
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollment.resources

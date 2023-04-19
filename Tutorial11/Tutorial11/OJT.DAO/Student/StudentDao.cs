@@ -62,6 +62,7 @@ namespace OJT.DAO.Student
                                         new SqlParameter("@student_id", studentEntity.studentId),
                                         new SqlParameter("@first_name", studentEntity.firstname),
                                         new SqlParameter("@last_name", studentEntity.lastname),
+                                        new SqlParameter("@photo", studentEntity.photo),
                                         new SqlParameter("@gender", studentEntity.gender),
                                         new SqlParameter("@date_of_birth", studentEntity.dateofbirth),
                                         new SqlParameter("@email", studentEntity.email),
@@ -79,12 +80,13 @@ namespace OJT.DAO.Student
         /// <param name="employeeEntity">.</param>
         public bool Update(StudentEntity studentEntity)
         {
-            strSql = "UPDATE student_tb SET first_name=@first_name,last_name=@last_name,gender=@gender,date_of_birth=@date_of_birth,email=@email,phone=@phone,address=@address WHERE student_id = @student_id";
+            strSql = "UPDATE student_tb SET first_name=@first_name,last_name=@last_name,photo=null,gender=@gender,date_of_birth=@date_of_birth,email=@email,phone=@phone,address=@address WHERE student_id = @student_id";
 
             SqlParameter[] sqlParam = {
                                        new SqlParameter("@student_id", studentEntity.studentId),
                                         new SqlParameter("@first_name", studentEntity.firstname),
                                         new SqlParameter("@last_name", studentEntity.lastname),
+                                        new SqlParameter("@photo", studentEntity.photo),
                                         new SqlParameter("@gender", studentEntity.gender),
                                         new SqlParameter("@date_of_birth", studentEntity.dateofbirth),
                                         new SqlParameter("@email", studentEntity.email),

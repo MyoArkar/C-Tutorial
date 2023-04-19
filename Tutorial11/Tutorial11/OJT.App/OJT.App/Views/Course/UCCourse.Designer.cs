@@ -52,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -65,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(26, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 29);
+            this.label1.Size = new System.Drawing.Size(89, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Course";
             // 
@@ -74,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(140, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 29);
+            this.label2.Size = new System.Drawing.Size(153, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "CourseName";
             // 
@@ -83,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(140, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 29);
+            this.label3.Size = new System.Drawing.Size(153, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = " Course Hour";
             // 
@@ -92,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(180, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 29);
+            this.label4.Size = new System.Drawing.Size(119, 29);
             this.label4.TabIndex = 3;
             this.label4.Text = "Start date";
             // 
@@ -101,7 +102,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(184, 364);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 29);
+            this.label5.Size = new System.Drawing.Size(110, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "End Date";
             // 
@@ -110,7 +111,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(143, 420);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 29);
+            this.label6.Size = new System.Drawing.Size(150, 29);
             this.label6.TabIndex = 5;
             this.label6.Text = "Course Price";
             // 
@@ -119,7 +120,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(74, 492);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(228, 29);
+            this.label7.Size = new System.Drawing.Size(217, 29);
             this.label7.TabIndex = 6;
             this.label7.Text = "Course Description";
             // 
@@ -127,42 +128,42 @@
             // 
             this.txt_cname.Location = new System.Drawing.Point(313, 185);
             this.txt_cname.Name = "txt_cname";
-            this.txt_cname.Size = new System.Drawing.Size(386, 35);
+            this.txt_cname.Size = new System.Drawing.Size(386, 36);
             this.txt_cname.TabIndex = 7;
             // 
             // txt_chour
             // 
             this.txt_chour.Location = new System.Drawing.Point(313, 233);
             this.txt_chour.Name = "txt_chour";
-            this.txt_chour.Size = new System.Drawing.Size(386, 35);
+            this.txt_chour.Size = new System.Drawing.Size(386, 36);
             this.txt_chour.TabIndex = 8;
             // 
             // dtp_sdate
             // 
             this.dtp_sdate.Location = new System.Drawing.Point(313, 296);
             this.dtp_sdate.Name = "dtp_sdate";
-            this.dtp_sdate.Size = new System.Drawing.Size(386, 35);
+            this.dtp_sdate.Size = new System.Drawing.Size(386, 36);
             this.dtp_sdate.TabIndex = 9;
             // 
             // dtp_edate
             // 
             this.dtp_edate.Location = new System.Drawing.Point(313, 364);
             this.dtp_edate.Name = "dtp_edate";
-            this.dtp_edate.Size = new System.Drawing.Size(386, 35);
+            this.dtp_edate.Size = new System.Drawing.Size(386, 36);
             this.dtp_edate.TabIndex = 10;
             // 
             // txt_price
             // 
             this.txt_price.Location = new System.Drawing.Point(313, 421);
             this.txt_price.Name = "txt_price";
-            this.txt_price.Size = new System.Drawing.Size(386, 35);
+            this.txt_price.Size = new System.Drawing.Size(386, 36);
             this.txt_price.TabIndex = 11;
             // 
             // txt_desc
             // 
             this.txt_desc.Location = new System.Drawing.Point(313, 492);
             this.txt_desc.Name = "txt_desc";
-            this.txt_desc.Size = new System.Drawing.Size(386, 35);
+            this.txt_desc.Size = new System.Drawing.Size(386, 36);
             this.txt_desc.TabIndex = 12;
             // 
             // contextMenuStrip1
@@ -221,7 +222,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Roboto", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCCourse";
             this.Size = new System.Drawing.Size(1534, 1093);

@@ -33,9 +33,6 @@
             this.btn_addnew = new System.Windows.Forms.Button();
             this.lbl_courseLIst = new System.Windows.Forms.Label();
             this.dgvCourseList = new System.Windows.Forms.DataGridView();
-            this.coursetbBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentDBDataSet1 = new OJT.App.StudentDBDataSet1();
-            this.course_tbTableAdapter = new OJT.App.StudentDBDataSet1TableAdapters.course_tbTableAdapter();
             this.gc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coursenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coursehoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +40,9 @@
             this.enddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coursepriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coursedescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coursetbBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentDBDataSet1 = new OJT.App.StudentDBDataSet1();
+            this.course_tbTableAdapter = new OJT.App.StudentDBDataSet1TableAdapters.course_tbTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourseList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursetbBindingSource)).BeginInit();
@@ -51,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btn_addnew);
             this.panel1.Controls.Add(this.lbl_courseLIst);
             this.panel1.Location = new System.Drawing.Point(6, 6);
@@ -74,7 +75,7 @@
             this.lbl_courseLIst.AutoSize = true;
             this.lbl_courseLIst.Location = new System.Drawing.Point(66, 32);
             this.lbl_courseLIst.Name = "lbl_courseLIst";
-            this.lbl_courseLIst.Size = new System.Drawing.Size(134, 29);
+            this.lbl_courseLIst.Size = new System.Drawing.Size(128, 29);
             this.lbl_courseLIst.TabIndex = 0;
             this.lbl_courseLIst.Text = "CourseList";
             // 
@@ -82,6 +83,7 @@
             // 
             this.dgvCourseList.AllowUserToAddRows = false;
             this.dgvCourseList.AutoGenerateColumns = false;
+            this.dgvCourseList.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvCourseList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCourseList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gc_id,
@@ -92,28 +94,15 @@
             this.coursepriceDataGridViewTextBoxColumn,
             this.coursedescriptionDataGridViewTextBoxColumn});
             this.dgvCourseList.DataSource = this.coursetbBindingSource;
+            this.dgvCourseList.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvCourseList.Location = new System.Drawing.Point(6, 105);
             this.dgvCourseList.Name = "dgvCourseList";
             this.dgvCourseList.ReadOnly = true;
             this.dgvCourseList.RowHeadersWidth = 66;
             this.dgvCourseList.RowTemplate.Height = 29;
-            this.dgvCourseList.Size = new System.Drawing.Size(909, 347);
+            this.dgvCourseList.Size = new System.Drawing.Size(925, 347);
             this.dgvCourseList.TabIndex = 1;
             this.dgvCourseList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourseList_CellContentClick);
-            // 
-            // coursetbBindingSource
-            // 
-            this.coursetbBindingSource.DataMember = "course_tb";
-            this.coursetbBindingSource.DataSource = this.studentDBDataSet1;
-            // 
-            // studentDBDataSet1
-            // 
-            this.studentDBDataSet1.DataSetName = "StudentDBDataSet1";
-            this.studentDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // course_tbTableAdapter
-            // 
-            this.course_tbTableAdapter.ClearBeforeFill = true;
             // 
             // gc_id
             // 
@@ -178,13 +167,27 @@
             this.coursedescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             this.coursedescriptionDataGridViewTextBoxColumn.Width = 240;
             // 
+            // coursetbBindingSource
+            // 
+            this.coursetbBindingSource.DataMember = "course_tb";
+            this.coursetbBindingSource.DataSource = this.studentDBDataSet1;
+            // 
+            // studentDBDataSet1
+            // 
+            this.studentDBDataSet1.DataSetName = "StudentDBDataSet1";
+            this.studentDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // course_tbTableAdapter
+            // 
+            this.course_tbTableAdapter.ClearBeforeFill = true;
+            // 
             // UCCourseList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvCourseList);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Roboto", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCCourseList";
             this.Size = new System.Drawing.Size(1539, 973);

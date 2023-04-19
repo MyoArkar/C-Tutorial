@@ -91,7 +91,7 @@ namespace OJT.App.Views.Student
             
             studentEntity.firstname = txt_fname.Text;
             studentEntity.lastname = txt_lname.Text;
-            studentEntity.photo = null;
+            studentEntity.photo = pic;
             studentEntity.gender = rdbtnValue;
             studentEntity.dateofbirth = Convert.ToDateTime(dtpDateOfBirth.Text);
             studentEntity.email = txt_email.Text;

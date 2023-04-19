@@ -58,6 +58,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StudentDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDBDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Course\UCCourse.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +84,18 @@
     </Compile>
     <Compile Include="Views\Course\UCCourseList.Designer.cs">
       <DependentUpon>UCCourseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Enrollment\UCEnrollment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Enrollment\UCEnrollment.Designer.cs">
+      <DependentUpon>UCEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Enrollment\UCEnrollmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Enrollment\UCEnrollmentList.Designer.cs">
+      <DependentUpon>UCEnrollmentList.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Menu\FrmMenu.cs">
       <SubType>Form</SubType>
@@ -102,6 +129,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Course\UCCourseList.resx">
       <DependentUpon>UCCourseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Enrollment\UCEnrollment.resx">
+      <DependentUpon>UCEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Enrollment\UCEnrollmentList.resx">
+      <DependentUpon>UCEnrollmentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -143,6 +176,39 @@
     <None Include="StudentDBDataSet1.xss">
       <DependentUpon>StudentDBDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="StudentDBDataSet2.xsc">
+      <DependentUpon>StudentDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet2.xss">
+      <DependentUpon>StudentDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet3.xsc">
+      <DependentUpon>StudentDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet3.xss">
+      <DependentUpon>StudentDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet4.xsc">
+      <DependentUpon>StudentDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="StudentDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StudentDBDataSet4.xss">
+      <DependentUpon>StudentDBDataSet4.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -161,5 +227,6 @@
       <Name>OJT.Services</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

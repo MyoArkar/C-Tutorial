@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OJT.App.Views.Student;
 using OJT.App.Views.Course;
+using OJT.App.Views.Enrollment;
 
 namespace OJT.App.Views.Menu
 {
@@ -45,6 +46,13 @@ namespace OJT.App.Views.Menu
             UCCourse ucCourse = new UCCourse();
             pnUC.Controls.Clear();
             pnUC.Controls.Add(ucCourse);
+        }
+
+        private void enrollmentListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UCEnrollmentList uCEnrollmentList = new UCEnrollmentList();
+            pnUC.Controls.Clear();
+            pnUC.Controls.Add(uCEnrollmentList);
         }
     }
 }
