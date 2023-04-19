@@ -79,10 +79,16 @@ namespace OJT.App.Views.Student
             if(dgvStudentList.CurrentCell.ColumnIndex.Equals(10)) {
                 int studentId = Convert.ToInt32(dgvStudentList.Rows[e.RowIndex].Cells["gc_studentid"].Value);
                 DataTable dtb = enrollmentService.Get(studentId);
-                int e_id = Convert.ToInt32(dtb.Rows[0]["enrollment_id"]);
-                bool success = false;
-                if (studentService.Delete(studentId) && enrollmentService.Delete(e_id))
+                int e_id = 0;
+                if(dtb.Rows.Count > 0)
                 {
+                     e_id = Convert.ToInt32(dtb.Rows[0]["enrollment_id"]);
+                }
+                
+                bool success = false;
+                if (studentService.Delete(studentId))
+                {
+                    enrollmentService.Delete(e_id);
                     success = true;
                 }
                   

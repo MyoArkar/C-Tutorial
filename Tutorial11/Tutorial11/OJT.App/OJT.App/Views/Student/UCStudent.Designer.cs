@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCStudent));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStudent = new System.Windows.Forms.Label();
             this.lbl_fname = new System.Windows.Forms.Label();
@@ -259,7 +260,8 @@
             // 
             // pbPhoto
             // 
-            this.pbPhoto.Location = new System.Drawing.Point(624, 140);
+            this.pbPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbPhoto.Image")));
+            this.pbPhoto.Location = new System.Drawing.Point(625, 140);
             this.pbPhoto.Name = "pbPhoto";
             this.pbPhoto.Size = new System.Drawing.Size(297, 251);
             this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

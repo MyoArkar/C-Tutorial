@@ -20,7 +20,7 @@ namespace OJT.App.Views.Student
         public static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-GAIQ5AI;Initial Catalog=StudentDB;Integrated Security=True");
         SqlDataAdapter adapt;
         String rdbtnValue = "";
-        byte[] pic = null;
+        public byte[] pic = null;
         public string ID = string.Empty;
         StudentService studentService = new StudentService();
         UCStudentList ucStudentList = new UCStudentList();
@@ -30,7 +30,7 @@ namespace OJT.App.Views.Student
         }
 
         private void btn_addnew_Click(object sender, EventArgs e)
-        {
+        {   
             AddorUpdate();
         }
         private void AddorUpdate()
@@ -134,7 +134,10 @@ namespace OJT.App.Views.Student
                 {
                     txt_fname.Text = dt.Rows[0]["first_name"].ToString();
                     txt_lname.Text = dt.Rows[0]["last_name"].ToString();
-
+                    pic = (byte[])dt.Rows[0]["photo"];
+                    MemoryStream ba = new MemoryStream(pic);
+                    pbPhoto.Image = Image.FromStream(ba);
+                    
                     rdbtnValue = dt.Rows[0]["gender"].ToString();
                     dtpDateOfBirth.Text = dt.Rows[0]["date_of_birth"].ToString();
                     txt_email.Text = dt.Rows[0]["email"].ToString();
@@ -170,7 +173,31 @@ namespace OJT.App.Views.Student
         }
         private void btn_browse_Click(object sender, EventArgs e)
         {
-            
+            Stream myStream = null;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image File(*.png; *.jpg; *.bmp) | *.png; *.jpg; *.bmp ";
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog.OpenFile()) != null)
+                    {
+                        string FileName = openFileDialog.FileName;
+                        pbPhoto.Load(FileName);
+                        MemoryStream stream = new MemoryStream();
+                        pbPhoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        pic = stream.ToArray();
+                        //MessageBox.Show(Convert.ToString(pic));
+                        //pic = System.IO.File.ReadAllBytes(FileName);
+                        //MessageBox.Show(FileName);
+                        //MessageBox.Show(Convert.ToBase64String(pic));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

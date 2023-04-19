@@ -56,7 +56,7 @@ namespace OJT.DAO.Student
         {
             
             strSql = "INSERT INTO student_tb(student_id,first_name,last_name,photo,gender,date_of_birth,email,phone,address)" +
-                     "VALUES(@student_id,@first_name,@last_name,null,@gender,@date_of_birth,@email,@phone,@address)";
+                     "VALUES(@student_id,@first_name,@last_name,@photo,@gender,@date_of_birth,@email,@phone,@address)";
 
             SqlParameter[] sqlParam = {
                                         new SqlParameter("@student_id", studentEntity.studentId),
@@ -80,7 +80,7 @@ namespace OJT.DAO.Student
         /// <param name="employeeEntity">.</param>
         public bool Update(StudentEntity studentEntity)
         {
-            strSql = "UPDATE student_tb SET first_name=@first_name,last_name=@last_name,photo=null,gender=@gender,date_of_birth=@date_of_birth,email=@email,phone=@phone,address=@address WHERE student_id = @student_id";
+            strSql = "UPDATE student_tb SET first_name=@first_name,last_name=@last_name,photo=@photo,gender=@gender,date_of_birth=@date_of_birth,email=@email,phone=@phone,address=@address WHERE student_id = @student_id";
 
             SqlParameter[] sqlParam = {
                                        new SqlParameter("@student_id", studentEntity.studentId),
