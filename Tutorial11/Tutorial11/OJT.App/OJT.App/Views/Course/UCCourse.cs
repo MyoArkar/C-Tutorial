@@ -34,7 +34,34 @@ namespace OJT.App.Views.Course
 
         private void btn_addnew_Click(object sender, EventArgs e)
         {
-            AddorUpdate();
+            if (txt_cname.Text=="" || txt_chour.Text=="" || txt_price.Text=="" || txt_desc.Text=="")
+            {
+                if (txt_cname.Text == "")
+                {
+                    txt_cname.Focus();
+                    MessageBox.Show("Fill Course Name");
+                }
+                if (txt_chour.Text == "")
+                {
+                    txt_chour.Focus();
+                    MessageBox.Show("Fill Course Hour");
+                }
+                if (txt_price.Text == "")
+                {
+                    txt_price.Focus();
+                    MessageBox.Show("Fill Course Price");
+                }
+                if (txt_desc.Text == "")
+                {
+                    txt_desc.Focus();
+                    MessageBox.Show("Fill Course Description");
+                }
+            }
+            else
+            {
+                AddorUpdate();
+            }
+            
         }
 
         private void AddorUpdate()

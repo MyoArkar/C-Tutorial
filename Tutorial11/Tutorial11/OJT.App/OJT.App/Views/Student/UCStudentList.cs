@@ -11,6 +11,7 @@ using OJT.App.Views.Menu;
 using OJT.App.Views.Enrollment;
 using OJT.Services;
 using OJT.Services.Enrollment;
+using Microsoft.Office.Interop.Excel;
 
 namespace OJT.App.Views.Student
 {
@@ -29,7 +30,7 @@ namespace OJT.App.Views.Student
         }
         private void BindGrid()
         {
-            DataTable dt = studentService.GetAll();
+            System.Data.DataTable dt = studentService.GetAll();
             dgvStudentList.DataSource = dt;
 
             DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
@@ -53,7 +54,7 @@ namespace OJT.App.Views.Student
         {
             UCStudent uCStudent = new UCStudent();
             uCStudent.ID = null;
-            FrmMenu main = Application.OpenForms["FrmMenu"] != null ? (FrmMenu)Application.OpenForms["FrmMenu"] : null;
+            FrmMenu main = System.Windows.Forms.Application.OpenForms["FrmMenu"] != null ? (FrmMenu)System.Windows.Forms.Application.OpenForms["FrmMenu"] : null;
             if(main == null)
             {
                 main = new FrmMenu();
@@ -78,7 +79,7 @@ namespace OJT.App.Views.Student
             }
             if(dgvStudentList.CurrentCell.ColumnIndex.Equals(10)) {
                 int studentId = Convert.ToInt32(dgvStudentList.Rows[e.RowIndex].Cells["gc_studentid"].Value);
-                DataTable dtb = enrollmentService.Get(studentId);
+                System.Data.DataTable dtb = enrollmentService.Get(studentId);
                 int e_id = 0;
                 if(dtb.Rows.Count > 0)
                 {
@@ -109,6 +110,39 @@ namespace OJT.App.Views.Student
                 uCEnrollment.student_id = studentId;
                 this.Controls.Add(uCEnrollment);
             }
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = null;
+            worksheet = workbook.Worksheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "StudentList";
+
+            for(int i = 1; i <= dgvStudentList.Columns.Count-2; i++) 
+            {
+                worksheet.Cells[1, i] = dgvStudentList.Columns[i - 1].HeaderText;
+            }
+            for(int i = 0; i < dgvStudentList.Rows.Count; i++)
+            {
+                for(int j = 0; j < dgvStudentList.Columns.Count-2; j++)
+                {
+                    worksheet.Cells[i+2, j+1] = dgvStudentList.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            var saveFileDialoge = new SaveFileDialog();
+            saveFileDialoge.FileName = "output";
+            saveFileDialoge.DefaultExt = ".xlsx";
+            if(saveFileDialoge.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialoge.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+            }
+            app.Quit();
         }
     }
 }

@@ -43,6 +43,10 @@
             this.coursetbBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentDBDataSet1 = new OJT.App.StudentDBDataSet1();
             this.course_tbTableAdapter = new OJT.App.StudentDBDataSet1TableAdapters.course_tbTableAdapter();
+            this.btn_export = new System.Windows.Forms.Button();
+            this.btn_browse = new System.Windows.Forms.Button();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.btn_import = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourseList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursetbBindingSource)).BeginInit();
@@ -52,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btn_export);
             this.panel1.Controls.Add(this.btn_addnew);
             this.panel1.Controls.Add(this.lbl_courseLIst);
             this.panel1.Location = new System.Drawing.Point(6, 6);
@@ -62,7 +67,7 @@
             // 
             // btn_addnew
             // 
-            this.btn_addnew.Location = new System.Drawing.Point(422, 19);
+            this.btn_addnew.Location = new System.Drawing.Point(277, 19);
             this.btn_addnew.Name = "btn_addnew";
             this.btn_addnew.Size = new System.Drawing.Size(142, 55);
             this.btn_addnew.TabIndex = 1;
@@ -75,7 +80,7 @@
             this.lbl_courseLIst.AutoSize = true;
             this.lbl_courseLIst.Location = new System.Drawing.Point(66, 32);
             this.lbl_courseLIst.Name = "lbl_courseLIst";
-            this.lbl_courseLIst.Size = new System.Drawing.Size(128, 29);
+            this.lbl_courseLIst.Size = new System.Drawing.Size(131, 30);
             this.lbl_courseLIst.TabIndex = 0;
             this.lbl_courseLIst.Text = "CourseList";
             // 
@@ -181,10 +186,50 @@
             // 
             this.course_tbTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(540, 19);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(123, 55);
+            this.btn_export.TabIndex = 2;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            // 
+            // btn_browse
+            // 
+            this.btn_browse.Location = new System.Drawing.Point(539, 503);
+            this.btn_browse.Name = "btn_browse";
+            this.btn_browse.Size = new System.Drawing.Size(130, 55);
+            this.btn_browse.TabIndex = 3;
+            this.btn_browse.Text = "browse";
+            this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(114, 503);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(290, 36);
+            this.txtFileName.TabIndex = 4;
+            // 
+            // btn_import
+            // 
+            this.btn_import.Location = new System.Drawing.Point(730, 503);
+            this.btn_import.Name = "btn_import";
+            this.btn_import.Size = new System.Drawing.Size(114, 55);
+            this.btn_import.TabIndex = 5;
+            this.btn_import.Text = "import";
+            this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
+            // 
             // UCCourseList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_import);
+            this.Controls.Add(this.txtFileName);
+            this.Controls.Add(this.btn_browse);
             this.Controls.Add(this.dgvCourseList);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,6 +243,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.coursetbBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDBDataSet1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -217,5 +263,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn enddateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursepriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coursedescriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.Button btn_browse;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Button btn_import;
     }
 }

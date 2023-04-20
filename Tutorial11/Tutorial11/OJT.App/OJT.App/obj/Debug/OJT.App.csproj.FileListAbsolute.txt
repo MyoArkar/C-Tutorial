@@ -36,3 +36,4 @@ D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\OJT.Servi
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.csproj.CopyComplete
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollmentList.resources
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollment.resources
+D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.csproj.ResolveComReference.cache

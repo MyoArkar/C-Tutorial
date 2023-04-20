@@ -41,6 +41,7 @@
             this.studentDBDataSet = new OJT.App.StudentDBDataSet();
             this.studentDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollments_tbTableAdapter = new OJT.App.StudentDBDataSet2TableAdapters.enrollments_tbTableAdapter();
+            this.btn_export = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrollList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentstbBindingSource)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_export);
             this.panel1.Controls.Add(this.lblELIst);
             this.panel1.Location = new System.Drawing.Point(0, 22);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -143,6 +145,16 @@
             // 
             this.enrollments_tbTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(322, 8);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(165, 53);
+            this.btn_export.TabIndex = 2;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            // 
             // UCEnrollmentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -179,5 +191,6 @@
         private StudentDBDataSet studentDBDataSet;
         private System.Windows.Forms.BindingSource studentDBDataSetBindingSource;
         private StudentDBDataSet2TableAdapters.enrollments_tbTableAdapter enrollments_tbTableAdapter;
+        private System.Windows.Forms.Button btn_export;
     }
 }

@@ -46,6 +46,7 @@
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_export = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studenttbBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDBDataSet)).BeginInit();
@@ -205,11 +206,22 @@
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Width = 160;
             // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(194, 531);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(181, 44);
+            this.btn_export.TabIndex = 2;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            // 
             // UCStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.btn_export);
             this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btn_export;
     }
 }

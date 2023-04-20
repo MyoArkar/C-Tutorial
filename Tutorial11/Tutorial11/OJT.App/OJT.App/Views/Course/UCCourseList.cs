@@ -11,6 +11,8 @@ using OJT.App.Views.Menu;
 using OJT.App.Views.Student;
 using OJT.Services;
 using OJT.Services.Course;
+using Microsoft.Office.Interop.Excel;
+using System.Data.OleDb;
 
 namespace OJT.App.Views.Course
 {
@@ -28,7 +30,7 @@ namespace OJT.App.Views.Course
         }
         private void BindGrid()
         {
-            DataTable dt = courseService.GetAll();
+            System.Data.DataTable dt = courseService.GetAll();
             dgvCourseList.DataSource = dt;
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
@@ -43,7 +45,7 @@ namespace OJT.App.Views.Course
         {
             UCCourse uCCourse = new UCCourse();
             uCCourse.ID = null;
-            FrmMenu main = Application.OpenForms["FrmMenu"] != null ? (FrmMenu)Application.OpenForms["FrmMenu"] : null;
+            FrmMenu main = System.Windows.Forms.Application.OpenForms["FrmMenu"] != null ? (FrmMenu)System.Windows.Forms.Application.OpenForms["FrmMenu"] : null;
             if (main == null)
             {
                 main = new FrmMenu();
@@ -78,6 +80,61 @@ namespace OJT.App.Views.Course
                 UCCourseList uCCourseList = new UCCourseList();
                 this.Controls.Add(uCCourseList);
             }
+        }
+
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = null;
+            worksheet = workbook.Worksheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "CourseList";
+
+            for (int i = 1; i <= dgvCourseList.Columns.Count - 1; i++)
+            {
+                worksheet.Cells[1, i] = dgvCourseList.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dgvCourseList.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvCourseList.Columns.Count - 1; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dgvCourseList.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            var saveFileDialoge = new SaveFileDialog();
+            saveFileDialoge.FileName = "Courseoutput";
+            saveFileDialoge.DefaultExt = ".xlsx";
+            if (saveFileDialoge.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialoge.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+            }
+            app.Quit();
+        }
+
+        private void btn_browse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "Select file";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.FileName = txtFileName.Text;
+            fdlg.Filter = "Excel Sheet(*.xls; *.xlsx)|*.xls; *.xlsx|All Files(*.*)|*.*";
+            fdlg.FilterIndex = 1;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                txtFileName.Text = fdlg.FileName;
+                
+            }
+        }
+
+        private void btn_import_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

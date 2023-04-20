@@ -30,8 +30,51 @@ namespace OJT.App.Views.Student
         }
 
         private void btn_addnew_Click(object sender, EventArgs e)
-        {   
-            AddorUpdate();
+        {   if(txt_fname.Text=="" || txt_lname.Text=="" || (rdbtn_male.Checked==false && rdbtn_female.Checked==false)|| pic==null|| txt_email.Text == "" || txt_phone.Text == "" || txt_addr.Text == "")
+            {
+                if (txt_fname.Text == "")
+                {
+                    txt_fname.Focus();
+                    MessageBox.Show("Fill First Name");
+                }
+                if (txt_lname.Text == "")
+                {
+                    txt_lname.Focus();
+                    MessageBox.Show("Fill First Last Name");
+                }
+                if ((rdbtn_male.Checked == false && rdbtn_female.Checked == false))
+                {
+                    rdbtn_male.Focus();
+                    rdbtn_female.Focus();
+                    MessageBox.Show("Check Gender");
+                }
+                if (pic == null)
+                {
+                    pbPhoto.Focus();
+                    MessageBox.Show("Select Photo");
+                }
+                if (txt_email.Text == "")
+                {
+                    txt_email.Focus();
+                    MessageBox.Show("Fill Email");
+                }
+                if (txt_phone.Text == "")
+                {
+                    txt_fname.Focus();
+                    MessageBox.Show("Fill Phone");
+                }
+                if (txt_addr.Text == "")
+                {
+                    txt_fname.Focus();
+                    MessageBox.Show("Fill Address");
+                }
+
+            }
+            else
+            {
+                AddorUpdate();
+            }
+            
         }
         private void AddorUpdate()
         {
