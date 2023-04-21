@@ -135,7 +135,7 @@ namespace OJT.App.Views.Student
             }
 
             var saveFileDialoge = new SaveFileDialog();
-            saveFileDialoge.FileName = "output";
+            saveFileDialoge.FileName = "Studentoutput";
             saveFileDialoge.DefaultExt = ".xlsx";
             if(saveFileDialoge.ShowDialog() == DialogResult.OK)
             {
