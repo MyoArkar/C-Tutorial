@@ -21,11 +21,6 @@ Select student_name,date_of_birth,getdate() as CurrentDate, datediff(YY,date_of_
 from students
 
 ----------------
-sub query
-//////////////
-
-
-----------------
 store procedure
 
 /////////
