@@ -30,6 +30,7 @@ namespace OJT.Services.Enrollment
         {
             return enrollmentDao.Insert(enrollmentEntity);
         }
+        
         public bool Update(EnrollmentEntity enrollmentEntity)
         {
             return enrollmentDao.Update(enrollmentEntity);

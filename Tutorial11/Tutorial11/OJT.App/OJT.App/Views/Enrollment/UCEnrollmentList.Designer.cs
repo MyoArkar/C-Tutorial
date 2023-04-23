@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_export = new System.Windows.Forms.Button();
             this.lblELIst = new System.Windows.Forms.Label();
             this.dgvEnrollList = new System.Windows.Forms.DataGridView();
             this.gc_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +42,9 @@
             this.studentDBDataSet = new OJT.App.StudentDBDataSet();
             this.studentDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollments_tbTableAdapter = new OJT.App.StudentDBDataSet2TableAdapters.enrollments_tbTableAdapter();
-            this.btn_export = new System.Windows.Forms.Button();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.btn_browse = new System.Windows.Forms.Button();
+            this.btn_import = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrollList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enrollmentstbBindingSource)).BeginInit();
@@ -59,6 +62,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1564, 64);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(322, 8);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(165, 53);
+            this.btn_export.TabIndex = 2;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // lblELIst
             // 
@@ -145,20 +158,40 @@
             // 
             this.enrollments_tbTableAdapter.ClearBeforeFill = true;
             // 
-            // btn_export
+            // txtFileName
             // 
-            this.btn_export.Location = new System.Drawing.Point(322, 8);
-            this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(165, 53);
-            this.btn_export.TabIndex = 2;
-            this.btn_export.Text = "Export";
-            this.btn_export.UseVisualStyleBackColor = true;
-            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
+            this.txtFileName.Location = new System.Drawing.Point(64, 522);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(258, 35);
+            this.txtFileName.TabIndex = 2;
+            // 
+            // btn_browse
+            // 
+            this.btn_browse.Location = new System.Drawing.Point(378, 522);
+            this.btn_browse.Name = "btn_browse";
+            this.btn_browse.Size = new System.Drawing.Size(137, 43);
+            this.btn_browse.TabIndex = 3;
+            this.btn_browse.Text = "Browse";
+            this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
+            // 
+            // btn_import
+            // 
+            this.btn_import.Location = new System.Drawing.Point(573, 522);
+            this.btn_import.Name = "btn_import";
+            this.btn_import.Size = new System.Drawing.Size(118, 38);
+            this.btn_import.TabIndex = 4;
+            this.btn_import.Text = "Import";
+            this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
             // 
             // UCEnrollmentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_import);
+            this.Controls.Add(this.btn_browse);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.dgvEnrollList);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,5 +226,8 @@
         private System.Windows.Forms.BindingSource studentDBDataSetBindingSource;
         private StudentDBDataSet2TableAdapters.enrollments_tbTableAdapter enrollments_tbTableAdapter;
         private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Button btn_browse;
+        private System.Windows.Forms.Button btn_import;
     }
 }

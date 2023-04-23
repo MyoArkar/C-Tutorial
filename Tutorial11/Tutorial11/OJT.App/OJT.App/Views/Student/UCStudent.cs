@@ -216,30 +216,18 @@ namespace OJT.App.Views.Student
         }
         private void btn_browse_Click(object sender, EventArgs e)
         {
-            Stream myStream = null;
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image File(*.png; *.jpg; *.bmp) | *.png; *.jpg; *.bmp ";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            OpenFileDialog opd = new OpenFileDialog();
+            opd.Filter = "Image files(*.jpg;*.png;*.bmp) | *.jpg;*.png;*.bmp";
+            if(opd.ShowDialog() == DialogResult.OK)
             {
-                try
+                pbPhoto.Image = Image.FromFile(opd.FileName);
+                Image img = pbPhoto.Image;
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    if ((myStream = openFileDialog.OpenFile()) != null)
-                    {
-                        string FileName = openFileDialog.FileName;
-                        pbPhoto.Load(FileName);
-                        MemoryStream stream = new MemoryStream();
-                        pbPhoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        pic = stream.ToArray();
-                        //MessageBox.Show(Convert.ToString(pic));
-                        //pic = System.IO.File.ReadAllBytes(FileName);
-                        //MessageBox.Show(FileName);
-                        //MessageBox.Show(Convert.ToBase64String(pic));
-                    }
+                    img.Save(ms, img.RawFormat);
+                    pic = ms.ToArray();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+
             }
         }
     }

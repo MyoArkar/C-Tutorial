@@ -50,6 +50,7 @@ namespace OJT.DAO.Enrollment
 
             return success;
         }
+       
         public bool Update(EnrollmentEntity enrollmentEntity)
         {
             strSql = "UPDATE enrollments_tb SET course_id=@course_id,enrollment_date=@enrollment_date WHERE student_id=@student_id";

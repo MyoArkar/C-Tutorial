@@ -47,6 +47,9 @@
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn_export = new System.Windows.Forms.Button();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.btn_browse = new System.Windows.Forms.Button();
+            this.btn_import = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studenttbBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentDBDataSet)).BeginInit();
@@ -57,6 +60,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel1.Controls.Add(this.btn_export);
             this.panel1.Controls.Add(this.btn_addnew);
             this.panel1.Controls.Add(this.lblStudentList);
             this.panel1.Location = new System.Drawing.Point(-11, 0);
@@ -208,7 +212,7 @@
             // 
             // btn_export
             // 
-            this.btn_export.Location = new System.Drawing.Point(194, 531);
+            this.btn_export.Location = new System.Drawing.Point(629, 16);
             this.btn_export.Name = "btn_export";
             this.btn_export.Size = new System.Drawing.Size(181, 44);
             this.btn_export.TabIndex = 2;
@@ -216,12 +220,41 @@
             this.btn_export.UseVisualStyleBackColor = true;
             this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(61, 552);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(216, 35);
+            this.txtFileName.TabIndex = 2;
+            // 
+            // btn_browse
+            // 
+            this.btn_browse.Location = new System.Drawing.Point(299, 549);
+            this.btn_browse.Name = "btn_browse";
+            this.btn_browse.Size = new System.Drawing.Size(125, 38);
+            this.btn_browse.TabIndex = 3;
+            this.btn_browse.Text = "Browse";
+            this.btn_browse.UseVisualStyleBackColor = true;
+            this.btn_browse.Click += new System.EventHandler(this.btn_browse_Click);
+            // 
+            // btn_import
+            // 
+            this.btn_import.Location = new System.Drawing.Point(478, 546);
+            this.btn_import.Name = "btn_import";
+            this.btn_import.Size = new System.Drawing.Size(142, 41);
+            this.btn_import.TabIndex = 4;
+            this.btn_import.Text = "Import";
+            this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.btn_import_Click);
+            // 
             // UCStudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.btn_export);
+            this.Controls.Add(this.btn_import);
+            this.Controls.Add(this.btn_browse);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.dgvStudentList);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.22078F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,5 +292,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Button btn_browse;
+        private System.Windows.Forms.Button btn_import;
     }
 }

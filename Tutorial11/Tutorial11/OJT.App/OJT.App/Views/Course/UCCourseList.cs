@@ -168,18 +168,19 @@ namespace OJT.App.Views.Course
                             case 7: courseEntity.description = Convert.ToString(ws.Cells[i, j].Value); break;
                         }
 
-                        System.Data.DataTable dt = courseService.Get(courseEntity.courseId);
-                        if (dt.Rows.Count > 0)
-                        {
-                            success = courseService.Update(courseEntity);
+                        
+
+                    }
+                    System.Data.DataTable dt = courseService.Get(courseEntity.courseId);
+                    if (dt.Rows.Count > 0)
+                    {
+                        success = courseService.Update(courseEntity);
 
 
-                        }
-                        else
-                        {
-                            success = courseService.Insert(courseEntity);
-
-                        }
+                    }
+                    else
+                    {
+                        success = courseService.Insert(courseEntity);
 
                     }
                 }

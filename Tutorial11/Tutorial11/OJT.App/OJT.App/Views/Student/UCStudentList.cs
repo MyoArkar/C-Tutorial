@@ -12,6 +12,10 @@ using OJT.App.Views.Enrollment;
 using OJT.Services;
 using OJT.Services.Enrollment;
 using Microsoft.Office.Interop.Excel;
+using OJT.Entities.Student;
+using OJT.App.Views.Course;
+using OJT.Entities.Course;
+using OJT.Services.Course;
 
 namespace OJT.App.Views.Student
 {
@@ -26,6 +30,10 @@ namespace OJT.App.Views.Student
 
         private void UCStudentList_Load(object sender, EventArgs e)
         {
+            if (txtFileName.Text == "")
+            {
+                btn_import.Enabled = false;
+            }
             BindGrid();
         }
         private void BindGrid()
@@ -144,5 +152,38 @@ namespace OJT.App.Views.Student
             }
             app.Quit();
         }
+
+        private void btn_browse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "Select file";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.FileName = txtFileName.Text;
+            fdlg.Filter = "Excel Sheet(*.xls; *.xlsx)|*.xls; *.xlsx|All Files(*.*)|*.*";
+            fdlg.FilterIndex = 1;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                txtFileName.Text = fdlg.FileName;
+                btn_import.Enabled = true;
+            }
+        }
+
+        private void btn_import_Click(object sender, EventArgs e)
+        {
+            StudentEntity studentEntity = new StudentEntity();
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            Workbook wb;
+            Worksheet ws;
+
+
+            wb = excel.Workbooks.Open(txtFileName.Text);
+            ws = wb.Worksheets[1];
+            Range range = ws.UsedRange;
+
+
+            MessageBox.Show(Convert.ToString(ws.Cells[2, 4].Value));
+        }
     }
+    
 }

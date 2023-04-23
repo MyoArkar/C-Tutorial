@@ -37,5 +37,3 @@ D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.c
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollmentList.resources
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.Views.Enrollment.UCEnrollment.resources
 D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\obj\Debug\OJT.App.csproj.ResolveComReference.cache
-D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\Bytescout.Spreadsheet.dll
-D:\MAK\Web\C#\Tutorial\Tutorial11\Tutorial11\OJT.App\OJT.App\bin\Debug\Bytescout.Spreadsheet.xml
