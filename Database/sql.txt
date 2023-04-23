@@ -1,0 +1,124 @@
+table relationship
+////////////
+
+Select * from students stu
+  Inner JOIN universities uni
+  ON stu.uni_id = uni.uni_id
+
+Select * from universities uni
+  Inner JOIN cities city
+  ON uni.city_id = city.city_id
+
+Select * from cities city
+  Inner JOIN states_divisions s_d
+  ON city.s_d_id = s_d.s_d_id
+
+----------------
+student with average age by year
+////////////////
+
+Select student_name,date_of_birth,getdate() as CurrentDate, datediff(YY,date_of_birth,getdate()) as Age
+from students
+
+----------------
+sub query
+//////////////
+
+
+----------------
+store procedure
+
+/////////
+
+---AddStudent
+
+CREATE PROCEDURE AddStudent
+    @student_name VARCHAR(50),
+    @date_of_birth DATE,
+    @uni_id INT
+AS
+BEGIN
+	INSERT INTO students(student_name, date_of_birth, uni_id)
+    VALUES (@student_name, @date_of_birth,@uni_id);
+	
+END
+GO
+
+//////////
+---AddUniversity
+
+CREATE PROCEDURE AddUniversity
+ 
+ @uni_name nvarchar(50),
+ @city_id int
+AS
+BEGIN
+    INSERT INTO universities(uni_name,city_id)
+    VALUES (@uni_name,@city_id);
+END;
+GO
+
+/////////////
+---AddCity
+CREATE PROCEDURE AddCity
+	
+	@city_name nvarchar(50),
+	@s_d_id int
+AS
+BEGIN
+	INSERT INTO cities(city_name,s_d_id)
+	Values (@city_name,@s_d_id)
+END
+GO
+
+///////////
+---AddS_D
+CREATE PROCEDURE [dbo].[AddS_D] 
+	@s_d_name nvarchar(50)
+AS
+BEGIN
+	INSERT INTO states_divisions(s_d_name)
+	Values (@s_d_name)
+END
+GO
+
+//////////
+------------------------
+Views
+///////////
+
+AvgStudentAgeByUni
+
+CREATE VIEW AvgStudentAgeByUni AS
+SELECT uni_name, AVG(DATEDIFF(YEAR, date_of_birth, GETDATE())) AS AvgAge
+FROM students
+INNER JOIN universities ON students.student_id = universities.uni_id
+GROUP BY uni_name;
+
+/////////////
+NumOfStudent IN University
+
+CREATE VIEW UnversityByStudent AS
+SELECT uni_name, COUNT(*) AS NumStudents
+FROM universities
+INNER JOIN students ON students.uni_id=  universities.uni_id
+GROUP BY uni_name;
+
+///////////////
+NumOfUni_IN_City
+
+CREATE VIEW NumOfUni_IN_City AS
+SELECT city_name, COUNT(*) AS NumUni
+FROM cities
+INNER JOIN universities ON universities.city_id=  cities.city_id
+GROUP BY city_name;
+
+///////////////
+NumOfCity_IN_S_D
+
+CREATE VIEW NumOfCity_IN_S_D AS
+SELECT s_d_name, COUNT(*) AS NumCity
+FROM states_divisions
+INNER JOIN cities ON cities.s_d_id=  states_divisions.s_d_id
+GROUP BY s_d_name;
+
