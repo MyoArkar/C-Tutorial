@@ -95,12 +95,15 @@ namespace OJT.App.Views.Student
                 }
                 
                 bool success = false;
-                if (studentService.Delete(studentId))
-                {
-                    enrollmentService.Delete(e_id);
+                if (studentId != 0)
+                {   
+                    if(e_id != 0)
+                    {
+                        enrollmentService.Delete(e_id);
+                    }
+                    studentService.Delete(studentId);
                     success = true;
                 }
-                  
                 if (success)
                 {
                     MessageBox.Show("Delete Success.", "Success", MessageBoxButtons.OK);
@@ -181,58 +184,61 @@ namespace OJT.App.Views.Student
             ws = wb.Worksheets[1];
             Range range = ws.UsedRange;
 
-            MessageBox.Show(Convert.ToString(ws.Cells[2, 4].Value));
-            //bool success = false;
-            // if (Convert.ToString(ws.Cells[1, 1].Value) == "student_id")
-            //{
-            //for (int i = 2; i < range.Rows.Count + 1; i++)
-            //{
-            // for (int j = 1; j < range.Columns.Count + 1; j++)
-            // {
+            bool success = false;
+            if (Convert.ToString(ws.Cells[1, 1].Value) == "student_id")
+            {
+                for (int i = 2; i < range.Rows.Count + 1; i++)
+                {
+                for (int j = 1; j < range.Columns.Count + 1; j++)
+                {
 
-            //switch (j)
-            // {
-            //   case 1: studentEntity.studentId = Convert.ToInt32(ws.Cells[i, j].Value); break;
-            //   case 2: studentEntity.firstname = Convert.ToString(ws.Cells[i, j].Value); break;
-            //   case 3: studentEntity.lastname = Convert.ToString(ws.Cells[i, j].Value); break;
-            //   case 4: studentEntity.photo = null;break;
-            //   case 5: studentEntity.gender = Convert.ToString(ws.Cells[i, j].Value); break;
-            //  case 6: studentEntity.dateofbirth = Convert.ToDateTime(Convert.ToString(ws.Cells[i, j].Value)); break;
-            //  case 7: studentEntity.email = Convert.ToString(ws.Cells[i, j].Value); break;
-            //  case 8: studentEntity.phone = Convert.ToString(ws.Cells[i, j].Value); break;
-            //  case 9: studentEntity.address = Convert.ToString(ws.Cells[i, j].Value); break;
-            // }
-
+                switch (j)
+                {
+                  case 1: studentEntity.studentId = Convert.ToInt32(ws.Cells[i, j].Value); break;
+                  case 2: studentEntity.firstname = Convert.ToString(ws.Cells[i, j].Value); break;
+                  case 3: studentEntity.lastname = Convert.ToString(ws.Cells[i, j].Value); break;
+                  //case 4: studentEntity.photo = (byte[])(Convert.ToString(ws.Cells[i,j].value));break;
+                  case 5: studentEntity.gender = Convert.ToString(ws.Cells[i, j].Value); break;
+                 case 6: studentEntity.dateofbirth = Convert.ToDateTime(Convert.ToString(ws.Cells[i, j].Value)); break;
+                 case 7: studentEntity.email = Convert.ToString(ws.Cells[i, j].Value); break;
+                 case 8: studentEntity.phone = Convert.ToString(ws.Cells[i, j].Value); break;
+                 case 9: studentEntity.address = Convert.ToString(ws.Cells[i, j].Value); break;
+                }
 
 
-            // }
-            // System.Data.DataTable dt = studentService.Get(studentEntity.studentId);
-            //if (dt.Rows.Count > 0)
-            //{
-            //  success = studentService.Update(studentEntity);
+
+                }
+                System.Data.DataTable dt = studentService.Get(studentEntity.studentId);
+                if (dt.Rows.Count > 0)
+                {
+                        //success = studentService.Update1studentEntity);
+                        success = studentService.Update1(studentEntity);
 
 
-            //}
-            //else
-            //{
-            //   success = studentService.Insert(studentEntity);
+                }
+                else
+                {
+                        //success = studentService.Insert(studentEntity);
+                        success = studentService.Insert1(studentEntity);
 
-            // }
-            // }
-            // }
-            // else
-            // {
-            //    MessageBox.Show("Select CourseList File");
-            // }
+                 }
+                 }
+             }
+             else
+             {
+                MessageBox.Show("Select CourseList File");
+             }
 
-            // if (success)
-            // {
-            //    MessageBox.Show("Data Insert Successfully");
-            // }
-            //  this.Controls.Clear();
-            // UCStudentList uCStudentList = new UCStudentList();
-            // this.Controls.Add(uCStudentList);
+             if (success)
+             {
+                MessageBox.Show("Data Insert Successfully");
+            }
+             this.Controls.Clear();
+            UCStudentList uCStudentList = new UCStudentList();
+            this.Controls.Add(uCStudentList);
         }
+
+       
     }
     
 }

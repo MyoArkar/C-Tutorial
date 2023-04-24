@@ -30,10 +30,18 @@ namespace OJT.Services
         {
             return studentDao.Insert(studentEntity);
         }
+        public bool Insert1(StudentEntity studentEntity)
+        {
+            return studentDao.Insert1(studentEntity);
+        }
 
         public bool Update(StudentEntity studentEntity)
         {
             return studentDao.Update(studentEntity);
+        }
+        public bool Update1(StudentEntity studentEntity)
+        {
+            return studentDao.Update1(studentEntity);
         }
 
         public bool Delete(int id)

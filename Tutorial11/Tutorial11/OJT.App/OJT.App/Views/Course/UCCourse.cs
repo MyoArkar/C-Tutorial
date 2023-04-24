@@ -40,21 +40,25 @@ namespace OJT.App.Views.Course
                 {
                     txt_cname.Focus();
                     MessageBox.Show("Fill Course Name");
+                    return;
                 }
                 if (txt_chour.Text == "")
                 {
                     txt_chour.Focus();
                     MessageBox.Show("Fill Course Hour");
+                    return;
                 }
                 if (txt_price.Text == "")
                 {
                     txt_price.Focus();
                     MessageBox.Show("Fill Course Price");
+                    return;
                 }
                 if (txt_desc.Text == "")
                 {
                     txt_desc.Focus();
                     MessageBox.Show("Fill Course Description");
+                    return;
                 }
             }
             else

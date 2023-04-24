@@ -90,6 +90,7 @@ namespace OJT.App.Views.Enrollment
             {
                 txt_cname.Focus();
                 MessageBox.Show("Select Course");
+                return;
             }
             else
             {

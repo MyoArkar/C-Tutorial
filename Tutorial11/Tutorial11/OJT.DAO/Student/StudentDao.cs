@@ -73,6 +73,26 @@ namespace OJT.DAO.Student
 
             return success;
         }
+        public bool Insert1(StudentEntity studentEntity)
+        {
+
+            strSql = "INSERT INTO student_tb(student_id,first_name,last_name,gender,date_of_birth,email,phone,address)" +
+                     "VALUES(@student_id,@first_name,@last_name,@gender,@date_of_birth,@email,@phone,@address)";
+
+            SqlParameter[] sqlParam = {
+                                        new SqlParameter("@student_id", studentEntity.studentId),
+                                        new SqlParameter("@first_name", studentEntity.firstname),
+                                        new SqlParameter("@last_name", studentEntity.lastname),
+                                        new SqlParameter("@gender", studentEntity.gender),
+                                        new SqlParameter("@date_of_birth", studentEntity.dateofbirth),
+                                        new SqlParameter("@email", studentEntity.email),
+                                        new SqlParameter("@phone", studentEntity.phone),
+                                        new SqlParameter("@address", studentEntity.address)
+                                      };
+            bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlParam);
+
+            return success;
+        }
 
         /// <summary>
         /// Create Employee
@@ -97,7 +117,25 @@ namespace OJT.DAO.Student
 
             return success;
         }
-        
+        public bool Update1(StudentEntity studentEntity)
+        {
+            strSql = "UPDATE student_tb SET first_name=@first_name,last_name=@last_name,gender=@gender,date_of_birth=@date_of_birth,email=@email,phone=@phone,address=@address WHERE student_id = @student_id";
+
+            SqlParameter[] sqlParam = {
+                                       new SqlParameter("@student_id", studentEntity.studentId),
+                                        new SqlParameter("@first_name", studentEntity.firstname),
+                                        new SqlParameter("@last_name", studentEntity.lastname),
+                                        new SqlParameter("@gender", studentEntity.gender),
+                                        new SqlParameter("@date_of_birth", studentEntity.dateofbirth),
+                                        new SqlParameter("@email", studentEntity.email),
+                                        new SqlParameter("@phone", studentEntity.phone),
+                                        new SqlParameter("@address", studentEntity.address)
+                                      };
+            bool success = connection.ExecuteNonQuery(CommandType.Text, strSql, sqlParam);
+
+            return success;
+        }
+
         public bool Delete(int id)
         {
             strSql = "DELETE FROM student_tb  WHERE student_id =@student_id";

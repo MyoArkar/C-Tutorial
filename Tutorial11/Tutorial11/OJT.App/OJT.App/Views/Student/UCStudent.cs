@@ -12,12 +12,14 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using OJT.Entities.Student;
 using OJT.Services;
+using System.Configuration;
 
 namespace OJT.App.Views.Student
 {
     public partial class UCStudent : UserControl
     {
-        public static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-GAIQ5AI;Initial Catalog=StudentDB;Integrated Security=True");
+       public static string connectionString = ConfigurationManager.ConnectionStrings["Default"].ToString();
+        public static  SqlConnection conn = new SqlConnection(connectionString);
         SqlDataAdapter adapt;
         String rdbtnValue = "";
         public byte[] pic = null;
@@ -36,37 +38,44 @@ namespace OJT.App.Views.Student
                 {
                     txt_fname.Focus();
                     MessageBox.Show("Fill First Name");
+                    return;
                 }
                 if (txt_lname.Text == "")
                 {
                     txt_lname.Focus();
                     MessageBox.Show("Fill First Last Name");
+                    return;
                 }
                 if ((rdbtn_male.Checked == false && rdbtn_female.Checked == false))
                 {
                     rdbtn_male.Focus();
                     rdbtn_female.Focus();
                     MessageBox.Show("Check Gender");
+                    return;
                 }
                 if (pic == null)
                 {
                     pbPhoto.Focus();
                     MessageBox.Show("Select Photo");
+                    return;
                 }
                 if (txt_email.Text == "")
                 {
                     txt_email.Focus();
                     MessageBox.Show("Fill Email");
+                    return;
                 }
                 if (txt_phone.Text == "")
                 {
                     txt_fname.Focus();
                     MessageBox.Show("Fill Phone");
+                    return;
                 }
                 if (txt_addr.Text == "")
                 {
                     txt_fname.Focus();
                     MessageBox.Show("Fill Address");
+                    return;
                 }
 
             }
@@ -214,6 +223,12 @@ namespace OJT.App.Views.Student
                 btn_delete.Enabled = true;
             }
         }
+        public static byte[] converterDemo(Image x)
+        {
+            ImageConverter _imageConverter = new ImageConverter();
+            byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
+            return xByte;
+        }
         private void btn_browse_Click(object sender, EventArgs e)
         {
             OpenFileDialog opd = new OpenFileDialog();
@@ -222,13 +237,16 @@ namespace OJT.App.Views.Student
             {
                 pbPhoto.Image = Image.FromFile(opd.FileName);
                 Image img = pbPhoto.Image;
-                using (MemoryStream ms = new MemoryStream())
+                pic = converterDemo(img);
+                /*using (MemoryStream ms = new MemoryStream())
                 {
                     img.Save(ms, img.RawFormat);
                     pic = ms.ToArray();
-                }
+                }*/
 
             }
         }
+
+        
     }
 }

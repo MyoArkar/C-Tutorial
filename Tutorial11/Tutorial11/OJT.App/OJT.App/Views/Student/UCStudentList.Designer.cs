@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_export = new System.Windows.Forms.Button();
             this.btn_addnew = new System.Windows.Forms.Button();
             this.lblStudentList = new System.Windows.Forms.Label();
             this.studenttbBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -39,14 +40,13 @@
             this.gc_studentid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateofbirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_export = new System.Windows.Forms.Button();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btn_browse = new System.Windows.Forms.Button();
             this.btn_import = new System.Windows.Forms.Button();
@@ -68,6 +68,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1197, 71);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_export
+            // 
+            this.btn_export.Location = new System.Drawing.Point(629, 16);
+            this.btn_export.Name = "btn_export";
+            this.btn_export.Size = new System.Drawing.Size(181, 44);
+            this.btn_export.TabIndex = 2;
+            this.btn_export.Text = "Export";
+            this.btn_export.UseVisualStyleBackColor = true;
+            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // btn_addnew
             // 
@@ -114,7 +124,7 @@
             this.gc_studentid,
             this.firstnameDataGridViewTextBoxColumn,
             this.lastnameDataGridViewTextBoxColumn,
-            this.photoDataGridViewImageColumn,
+            this.photo,
             this.genderDataGridViewTextBoxColumn,
             this.dateofbirthDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -136,7 +146,7 @@
             this.gc_studentid.MinimumWidth = 8;
             this.gc_studentid.Name = "gc_studentid";
             this.gc_studentid.ReadOnly = true;
-            this.gc_studentid.Width = 160;
+            this.gc_studentid.Width = 166;
             // 
             // firstnameDataGridViewTextBoxColumn
             // 
@@ -156,14 +166,14 @@
             this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.lastnameDataGridViewTextBoxColumn.Width = 160;
             // 
-            // photoDataGridViewImageColumn
+            // photo
             // 
-            this.photoDataGridViewImageColumn.DataPropertyName = "photo";
-            this.photoDataGridViewImageColumn.HeaderText = "photo";
-            this.photoDataGridViewImageColumn.MinimumWidth = 8;
-            this.photoDataGridViewImageColumn.Name = "photoDataGridViewImageColumn";
-            this.photoDataGridViewImageColumn.ReadOnly = true;
-            this.photoDataGridViewImageColumn.Width = 160;
+            this.photo.DataPropertyName = "photo";
+            this.photo.HeaderText = "photo";
+            this.photo.MinimumWidth = 8;
+            this.photo.Name = "photo";
+            this.photo.ReadOnly = true;
+            this.photo.Width = 160;
             // 
             // genderDataGridViewTextBoxColumn
             // 
@@ -209,16 +219,6 @@
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Width = 160;
-            // 
-            // btn_export
-            // 
-            this.btn_export.Location = new System.Drawing.Point(629, 16);
-            this.btn_export.Name = "btn_export";
-            this.btn_export.Size = new System.Drawing.Size(181, 44);
-            this.btn_export.TabIndex = 2;
-            this.btn_export.Text = "Export";
-            this.btn_export.UseVisualStyleBackColor = true;
-            this.btn_export.Click += new System.EventHandler(this.btn_export_Click);
             // 
             // txtFileName
             // 
@@ -282,18 +282,18 @@
         private System.Windows.Forms.DataGridView dgvStudentList;
         private System.Windows.Forms.Button btn_addnew;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btn_export;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Button btn_browse;
+        private System.Windows.Forms.Button btn_import;
         private System.Windows.Forms.DataGridViewTextBoxColumn gc_studentid;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn photoDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewImageColumn photo;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateofbirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btn_export;
-        private System.Windows.Forms.TextBox txtFileName;
-        private System.Windows.Forms.Button btn_browse;
-        private System.Windows.Forms.Button btn_import;
     }
 }
